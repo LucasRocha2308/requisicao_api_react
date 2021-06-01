@@ -29,11 +29,15 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={handleClick}>smartphone</button>
-        <button onClick={handleClick}>tablet</button>
-        <button onClick={handleClick}>notebook</button>
+        <div className="buttons">
+          <button onClick={handleClick}>smartphone</button>
+          <button onClick={handleClick}>tablet</button>
+          <button onClick={handleClick}>notebook</button>
+        </div>
         {carregando && <p>Carregando...</p>}
-        {!carregando && dados && <Produto dados={dados} />}
+        <div className="Produto">
+          {!carregando && dados && <Produto dados={dados} />}
+        </div>
       </header>
     </div>
   );
